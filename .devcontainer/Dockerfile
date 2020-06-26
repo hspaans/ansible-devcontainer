@@ -27,9 +27,9 @@ RUN apt-get update \
     && groupadd --gid $USER_GID $USERNAME \
     && useradd -s /bin/bash --uid $USER_UID --gid $USER_GID -m $USERNAME \
     # [Optional] Add sudo support for the non-root user
-    && apt-get install -y sudo \
-    && echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME\
-    && chmod 0440 /etc/sudoers.d/$USERNAME \
+    # && apt-get install -y sudo \
+    # && echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME\
+    # && chmod 0440 /etc/sudoers.d/$USERNAME \
     #
     # Clean up
     && apt-get autoremove -y \

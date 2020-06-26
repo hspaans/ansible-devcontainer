@@ -1,6 +1,7 @@
 {
 	"name": "Ansible",
-	"build":{
+
+	"build": {
 		"dockerfile": "Dockerfile",
 		"context": "..",
 		"args": {
@@ -9,26 +10,19 @@
 		}
 	},
 
-	// Use 'settings' to set *default* container specific settings.json values on container create.
-	// You can edit these settings after create using File > Preferences > Settings > Remote.
 	"settings": {
 		"terminal.integrated.shell.linux": "/bin/bash"
 	},
 
-	// Use 'appPort' to create a container with published ports. If the port isn't working, be sure
-	// your server accepts connections from all interfaces (0.0.0.0 or '*'), not just localhost.
-	// "appPort": [],
+	"appPort": [],
 
-	// Uncomment the next line to run commands after the container is created.
-	// "postCreateCommand": "ansible-galaxy install -r roles/requirements.yml",
+	"postCreateCommand": "ansible-galaxy install -r roles/requirements.yml",
 
-	// Comment out if you want to use root
 	"remoteUser": "vscode",
 
-	// Add the IDs of extensions you want installed when the container is created in the array below.
 	"extensions": [
- 		// "github.vscode-pull-request-github",
-		// "gitlab.gitlab-workflow",
+ 		"github.vscode-pull-request-github",
+		"gitlab.gitlab-workflow",
 		"ms-python.python",
 		"redhat.vscode-yaml"
 	]

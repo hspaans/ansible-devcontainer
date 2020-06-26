@@ -18,7 +18,7 @@ RUN apt-get update \
     && apt-get -y install --no-install-recommends apt-utils dialog 2>&1 \
     #
     # Install git iproute2, procps, lsb-release (useful for CLI installs)
-    && apt-get -y install git iproute2 procps iproute2 lsb-release rcm sshpass \
+    && apt-get -y install --no-install-recommends git iproute2 procps iproute2 lsb-release rcm sshpass \
     #
     # Install Ansible and Ansible Lint
     && pip install ansible${ANSIBLE} ansible-lint yamllint molecule \

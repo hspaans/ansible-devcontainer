@@ -14,6 +14,7 @@ ARG USER_UID=1000
 ARG USER_GID=$USER_UID
 
 # Configure apt and install packages
+# hadolint ignore=DL3008,DL3013
 RUN apt-get update \
     && apt-get -y install --no-install-recommends apt-utils dialog 2>&1 \
     #
@@ -21,11 +22,11 @@ RUN apt-get update \
     && apt-get -y install --no-install-recommends git iproute2 procps iproute2 lsb-release rcm sshpass \
     #
     # Install Ansible and Ansible Lint
-    && pip install ansible${ANSIBLE} ansible-lint yamllint molecule \
+    && pip install "ansible${ANSIBLE}" ansible-lint yamllint molecule \
     #
     # Create a non-root user to use if preferred - see https://aka.ms/vscode-remote/containers/non-root-user.
-    && groupadd --gid $USER_GID $USERNAME \
-    && useradd -s /bin/bash --uid $USER_UID --gid $USER_GID -m $USERNAME \
+    && groupadd --gid "$USER_GID" "$USERNAME" \
+    && useradd -s /bin/bash --uid "$USER_UID" --gid "$USER_GID" -m "$USERNAME" \
     # [Optional] Add sudo support for the non-root user
     # && apt-get install -y sudo \
     # && echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME\

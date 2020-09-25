@@ -1,6 +1,4 @@
-ARG ANSIBLE="==2.*.*"
-ARG PYTHON=3
-FROM python:${PYTHON}
+FROM python:3-slim
 
 # Avoid warnings by switching to noninteractive
 ENV DEBIAN_FRONTEND=noninteractive
@@ -22,7 +20,7 @@ RUN apt-get update \
     && apt-get -y install --no-install-recommends git iproute2 procps iproute2 lsb-release rcm sshpass \
     #
     # Install Ansible and Ansible Lint
-    && pip install "ansible${ANSIBLE}" ansible-lint yamllint molecule \
+    && pip install ansible==2.9.* ansible-lint yamllint molecule \
     #
     # Create a non-root user to use if preferred - see https://aka.ms/vscode-remote/containers/non-root-user.
     && groupadd --gid "$USER_GID" "$USERNAME" \

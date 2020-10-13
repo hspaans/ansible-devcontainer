@@ -26,4 +26,5 @@ Add `.devcontainer/devcontainer.json` to your repository.
 
 | Ansible | Python Version | Container Tag | Status |
 |:---:|:-----:|:-----:|:---------:|
+| 2.10.0 | 3.8.6 | 2.10.0 | Published |
 | 2.9.14 | 3.8.6 | 2.9.14 | Published |

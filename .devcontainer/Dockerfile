@@ -11,7 +11,7 @@ ARG USERNAME=vscode
 ARG USER_UID=1000
 ARG USER_GID=$USER_UID
 
-COPY requirements.txt
+COPY requirements.txt /usr/local/etc/
 
 # Configure apt and install packages
 # hadolint ignore=DL3008,DL3013
@@ -22,7 +22,7 @@ RUN apt-get update \
     && apt-get -y install --no-install-recommends git iproute2 procps iproute2 lsb-release rcm sshpass \
     #
     # Install Ansible and Ansible Lint
-    && pip install ansible==2.10.* ansible-lint yamllint molecule \
+    && pip install -r /usr/local/etc/requirements.txt \
     #
     # Create a non-root user to use if preferred - see https://aka.ms/vscode-remote/containers/non-root-user.
     && groupadd --gid "$USER_GID" "$USERNAME" \

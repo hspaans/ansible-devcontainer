@@ -1,4 +1,4 @@
-FROM python:3-slim
+FROM python:3.9.0-slim
 
 # Avoid warnings by switching to noninteractive
 ENV DEBIAN_FRONTEND=noninteractive
@@ -10,6 +10,8 @@ ENV DEBIAN_FRONTEND=noninteractive
 ARG USERNAME=vscode
 ARG USER_UID=1000
 ARG USER_GID=$USER_UID
+
+COPY requirements.txt
 
 # Configure apt and install packages
 # hadolint ignore=DL3008,DL3013

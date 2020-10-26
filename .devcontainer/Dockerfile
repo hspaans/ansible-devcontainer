@@ -1,5 +1,6 @@
 FROM python:3.9.0-slim
 
+LABEL org.opencontainers.image.description="Ansible devcontainer for VSCode or Codespaces"
 LABEL org.opencontainers.image.source=https://github.com/hspaans/ansible-devcontainer
 
 # Avoid warnings by switching to noninteractive

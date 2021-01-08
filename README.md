@@ -28,10 +28,10 @@ The container is based on [LTS](https://en.wikipedia.org/wiki/Long-term_support)
 
 | Platform     | Version | Image                                                             |
 |:------------:|:-------:|:-----------------------------------------------------------------:|
-| Ansible      | 2.8     | [hspaans/ansible-devcontainer:2.8][ansibe-devcontainer:2.8]       |
-| Ansible      | 2.9     | [hspaans/ansible-devcontainer:2.9][ansibe-devcontainer:2.9]       |
-| Ansible Base | 2.10    | [hspaans/ansible-devcontainer:2.10][ansibe-devcontainer:2.10]     |
-| Ansible Base | 2.10    | [hspaans/ansible-devcontainer:latest][ansibe-devcontainer:latest] |
+| Ansible      | 2.8     | [hspaans/ansible-devcontainer:2.8][ansible-devcontainer:2.8]       |
+| Ansible      | 2.9     | [hspaans/ansible-devcontainer:2.9][ansible-devcontainer:2.9]       |
+| Ansible Base | 2.10    | [hspaans/ansible-devcontainer:2.10][ansible-devcontainer:2.10]     |
+| Ansible Base | 2.10    | [hspaans/ansible-devcontainer:latest][ansible-devcontainer:latest] |
 
 [ansible]: https://github.com/ansible/ansible
 [ansible-releases]: https://docs.ansible.com/ansible/devel/reference_appendices/release_and_maintenance.html

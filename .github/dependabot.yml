@@ -49,7 +49,7 @@ updates:
     target-branch: v2.8
     open-pull-requests-limit: 10
 
-- package-ecosystem: github-actions
+  - package-ecosystem: github-actions
     directory: /
     schedule:
       interval: weekly

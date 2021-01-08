@@ -78,7 +78,7 @@ updates:
     schedule:
       interval: weekly
       day: friday
-    target-branch: v2.7
+    target-branch: v2.8
     open-pull-requests-limit: 10
 
   - package-ecosystem: pip

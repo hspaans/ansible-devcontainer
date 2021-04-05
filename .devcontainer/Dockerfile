@@ -1,4 +1,4 @@
-FROM python:3.9.2-slim
+FROM python:3.9.3-slim
 
 LABEL org.opencontainers.image.description="Ansible devcontainer for VSCode or Codespaces"
 LABEL org.opencontainers.image.source=https://github.com/hspaans/ansible-devcontainer

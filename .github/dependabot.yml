@@ -18,7 +18,7 @@ updates:
   - package-ecosystem: docker
     directory: /.devcontainer/
     schedule:
-      interval: wekkly
+      interval: weekly
     target-branch: v2.9
     open-pull-requests-limit: 10
 

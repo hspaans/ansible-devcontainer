@@ -1,23 +1,17 @@
 {
 	"name": "Ansible",
-
 	"build": {
 		"dockerfile": "Dockerfile",
 		"context": ".."
 	},
-
 	"settings": {
 		"terminal.integrated.shell.linux": "/bin/bash"
 	},
-
 	"appPort": [],
-
 	"postCreateCommand": "ansible-galaxy install -r roles/requirements.yml",
-
 	"remoteUser": "vscode",
-
 	"extensions": [
- 		"github.vscode-pull-request-github",
+		"github.vscode-pull-request-github",
 		"ms-python.python",
 		"redhat.vscode-yaml"
 	]

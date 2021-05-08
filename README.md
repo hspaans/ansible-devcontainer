@@ -1,5 +1,9 @@
 # Devcontainer for Ansible
 
+> THIS PROJECT IS ARCHIVED
+>
+> See [hspaans/ansible-playbook-template](https://github.com/hspaans/ansible-playbook-template) as an alternative.
+> 
 ## Using within you project
 
 Add `.devcontainer/devcontainer.json` to your repository.
